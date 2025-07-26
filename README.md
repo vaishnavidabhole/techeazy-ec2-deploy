@@ -72,3 +72,9 @@ This assignment required uploading application logs to an S3 bucket with proper 
 
 ##  File Structure
 ├── README.md ├── assignment1.txt └── assignment2.txt (submitted via PR)
+
+## Important Links
+
+-  GitHub Repository: [https://github.com/vaishnavidabhole/techeazy-ec2-deploy](https://github.com/vaishnavidabhole/techeazy-ec2-deploy)
+-  Assignment 2 Pull Request: [PR #1](https://github.com/vaishnavidabhole/techeazy-ec2-deploy/pull/1)
+
