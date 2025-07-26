@@ -1,45 +1,45 @@
 Techeazy DevOps Assignment 1 – Automate EC2 Deployment
 --------------------------------------------------------
 
-✅ 1. AWS Free Tier Account:
+ 1. AWS Free Tier Account:
    - Successfully signed up and logged in to AWS Console.
 
-✅ 2. EC2 Instance Launched:
+ 2. EC2 Instance Launched:
    - Instance type: Amazon Linux 2023 (Free tier eligible)
    - Connected using MobaXterm + .pem file.
 
-✅ 3. Installed Java 21:
+ 3. Installed Java 21:
    - Used Amazon Corretto 21.
    - Verified with: `java -version` → openjdk 21.0.7
 
-✅ 4. Installed Maven:
+ 4. Installed Maven:
    - Installed via: `sudo dnf install maven -y`
    - Verified with: `mvn -version`
 
-✅ 5. Cloned the GitHub repo:
+ 5. Cloned the GitHub repo:
    - Repo: https://github.com/Trainings-TechEazy/test-repo-for-devops
    - Command used: `git clone <repo-url>`
 
-✅ 6. Built the Spring Boot app:
+ 6. Built the Spring Boot app:
    - Command: `mvn clean package`
    - Result: `BUILD SUCCESS`
 
-✅ 7. Ran the Application:
+ 7. Ran the Application:
    - Command: `java -jar target/hellomvc-0.0.1-SNAPSHOT.jar`
    - Exposed on: **Port 80** (used `sudo` for privileged access)
    - Verified with browser: `http://<EC2-Public-IP>/hello`
    - Output: `Hello from Spring MVC!`
 
-✅ 8. ENV support for keys:
+ 8. ENV support for keys:
    - No secrets hardcoded, ENV used in script.
 
-✅ 9. Parameterized stage support:
+ 9. Parameterized stage support:
    - Used script logic to pick config (dev/prod) dynamically.
 
-✅ 10. Auto Shutdown:
+ 10. Auto Shutdown:
    - EC2 stopped manually after testing to save cost.
 
 --------------------------------------------------------
-✔️ Assignment Completed Successfully
+✔ Assignment Completed Successfully
 Name: Vaishnavi Dabhole
 GitHub Repo: https://github.com/vaishnavidabhole/techeazy-ec2-deploy
