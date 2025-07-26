@@ -1,12 +1,10 @@
 Assignment 2 – S3 Upload & Lifecycle Management
 Submitted by: Vaishnavi Dabhole
 
-✅ Objective:
+Objective:
 Upload EC2 and application logs to an S3 bucket using IAM roles, then apply lifecycle rules.
 
----
-
-✅ Steps Performed:
+ Steps Performed:
 
 1. Created two IAM Roles:
    - Role 1 (Upload Only): `EC2PutRole`
@@ -34,18 +32,18 @@ Upload EC2 and application logs to an S3 bucket using IAM roles, then apply life
 6. Verified with IAM List-Only Role:
    - Attached `EC2ListRole` to EC2
    - Ran: `aws s3 ls s3://devops-logs-s3-buc/app-logs/`
-   - ✅ Able to list objects
+   -  Able to list objects
   
 
 ---
 
-🎯 Outcome:
-✔️ Logs uploaded successfully  
-✔️ Lifecycle rule created  
-✔️ IAM role separation working as expected
+ Outcome:
+✔ Logs uploaded successfully  
+✔ Lifecycle rule created  
+✔ IAM role separation working as expected
 
 ---
 
-📝 Conclusion :
+*** Conclusion :
 Successfully created lifecycle rule and automated application log archival to S3.
 All steps were completed using AWS Console + CLI via EC2 and MobaXterm. Bucket and files are private as per assignment.
