@@ -1,0 +1,49 @@
+Assignment 2 – S3 Upload & Lifecycle Management
+Submitted by: Vaishnavi Dabhole
+
+Objective:
+Upload EC2 and application logs to an S3 bucket using IAM roles, then apply lifecycle rules.
+
+ Steps Performed:
+
+1. Created two IAM Roles:
+   - Role 1 (Upload Only): `EC2PutRole`
+     - Allowed: s3:PutObject, s3:CreateBucket
+   - Role 2 (List Only): `EC2ListRole`
+     - Allowed: s3:ListBucket
+
+2. Created and attached `EC2PutRole` to EC2 instance.
+
+3. Created private S3 bucket:
+   - Name: `devops-logs-s3-buc`
+   - Blocked all public access (default)
+   - Region: ap-south-1
+
+4. Uploaded logs from EC2 to S3:
+   - EC2 log:  
+     `aws s3 cp /var/log/cloud-init.log s3://devops-logs-s3-buc/ec2-logs/`
+   - App log (`app.log`):  
+     `aws s3 cp app.log s3://devops-logs-s3-buc/app-logs/`
+
+5. Created S3 lifecycle rule:
+   - Rule Name: delete-after-7-days
+   - Action: Delete objects under `app-logs/` and `ec2-logs/` after 7 days
+
+6. Verified with IAM List-Only Role:
+   - Attached `EC2ListRole` to EC2
+   - Ran: `aws s3 ls s3://devops-logs-s3-buc/app-logs/`
+   -  Able to list objects
+  
+
+---
+
+ Outcome:
+✔ Logs uploaded successfully  
+✔ Lifecycle rule created  
+✔ IAM role separation working as expected
+
+---
+
+*** Conclusion :
+Successfully created lifecycle rule and automated application log archival to S3.
+All steps were completed using AWS Console + CLI via EC2 and MobaXterm. Bucket and files are private as per assignment.
